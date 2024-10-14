@@ -1,0 +1,226 @@
+
+.page {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 0.5s ease;
+}
+.page1 {
+  background-image: url('./img/back.png');
+}
+.page2 {
+  background-image: url('./img/back.png');
+  margin-top: 120px; /* Adjust the value as needed */
+  padding-top: 20px; /* Or use padding instead of margin if preferred */
+}
+
+#hi{
+  font-size: 50px;
+  background-color: rgb(255, 205, 205);
+}
+
+#map{
+  font-size: 25px;
+  background-color: rgb(255, 205, 205);
+}
+
+#container, #info1 {
+    width: 450px;
+    height: 450px;
+    margin: 10px auto;
+    background-color: red;
+    background: url("images/background.jpg");
+    background-size: 150px 150px;
+    animation: scroll 5s linear infinite;
+    border: 10px solid rgb(0, 17, 255);
+    border-radius: 20px;
+    text-align: center;
+  }
+  #container, #info2 {
+    width: 450px;
+    height: 450px;
+    margin: 10px auto;
+    background-color: red;
+    background: url("images/background.jpg");
+    background-size: 150px 150px;
+    animation: scroll 5s linear infinite;
+    border: 10px solid rgb(255, 0, 0);
+    border-radius: 20px;
+    text-align: center;
+  }
+  #container, #info3 {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: red;
+    background: url("images/background.jpg");
+    background-size: 150px 150px;
+    animation: scroll 5s linear infinite;
+    border: 10px solid rgb(234, 255, 0);
+    border-radius: 20px;
+    text-align: center;
+  }
+  #image
+  {
+      height: 88%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+  }
+/*   
+  @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    background: white;
+    font-family: "Merriweather", serif;
+    position: relative;
+    min-height: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .select-container {
+    max-width: 860px;
+    display: flex;
+    margin: 1em auto 3em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 4px 4px 0px;
+  }
+  
+  .character {
+    margin-bottom: 4px;
+    width: auto;
+    max-height: 120px;
+    align-self: stretch;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+  }
+  .character__name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: none;
+  }
+  .character__img, .character__name {
+    margin: 0;
+    padding: 0;
+  }
+  .character__img {
+    filter: grayscale(0.84);
+    height: 120px;
+  }
+  .character.active {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  .character.active .character__name {
+    display: block;
+    width: 100%;
+    background: #e3231e;
+    color: white;
+    opacity: 0.7;
+    margin-top: 0.8em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.3em 0;
+  }
+  .character.active:after {
+    content: "1P";
+    position: absolute;
+    text-align: center;
+    top: -15px;
+    left: 30%;
+    font-size: 36px;
+    color: #09296e;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px white;
+  }
+  .character.active .character__img {
+    filter: grayscale(0);
+    outline: 4px solid rgb(23, 50, 183);
+    -webkit-animation: flash 300ms linear;
+            animation: flash 300ms linear;
+  }
+  
+  
+  @-webkit-keyframes flash {
+    0% {
+      filter: brightness(100%);
+    }
+    20% {
+      filter: brightness(150%);
+    }
+    40% {
+      filter: brightness(100%);
+    }
+    60% {
+      filter: brightness(150%);
+    }
+    80% {
+      filter: brightness(100%);
+    }
+    100% {
+      filter: brightness(150%);
+    }
+  }
+  
+  @keyframes flash {
+    0% {
+      filter: brightness(100%);
+    }
+    20% {
+      filter: brightness(150%);
+    }
+    40% {
+      filter: brightness(100%);
+    }
+    60% {
+      filter: brightness(150%);
+    }
+    80% {
+      filter: brightness(100%);
+    }
+    100% {
+      filter: brightness(150%);
+    }
+  } */

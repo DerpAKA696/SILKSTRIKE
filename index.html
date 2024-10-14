@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        .gradient-btn {
+            background: linear-gradient(to right, #575f9a, #d7dde8);
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 9999;
+        }
+        /* .h1{
+            background-image: url('./img/logogame.png');
+        } */
+        body {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 0.5s ease;
+            background-color: black;
+            /* width: 80%;
+          height: 80%;
+          align-content: center; */
+        }
+
+        .page1 {
+            background-image: url('./img/back2.gif');
+        }
+
+        .page2 {
+            background-image: url('./img/back.png');
+        }
+        
+    </style>
+</head>
+
+<body background="./img/shop.png">
+
+    <body class="page1">
+        <div id="page1" class="page active">
+
+            <center>
+                <h1 style="margin-top: -50px; margin-left: 45px;"><img src="./img/baga.png" id="酷" style="width:1394px;height:800px; position: center;"></h1>
+                <button id="startButton" type="submit" class="gradient-btn" onclick="switchPage(); playPause();">Start game</button>
+                <h2 style="margin-top: -50px; font-size: 30px; color: white;">CLICK TO START GAME</h2>
+
+                <!-- <audio src="./img/SilkStrike.mp3" style="display:none;" autoplay></audio> -->
+                
+            </center>
+
+        </div>
+
+        <div id="page2" class="page">
+
+            <div style="display: flex; justify-content: space-between;">
+                <div id="info1">
+                    <h2 id="hi">FIRST PLAYER</h2>
+                    <img src="./img/Godamn.png" alt="霞妹" style="width: 300px; height: 300px;">
+                    <div id="image">
+                        <h1 id="name1"></h1>
+                        <img id="img1" src="images/jin.png" alt="">
+                    </div>
+                </div>
+                <div id="info3">
+                    <h2 id="map">PICK A STARTING MAP</h2>
+                    <div id="image">
+                        <h1 id="name"></h1>
+                        <img id="img" src="images/jin.png" alt="">
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button id="煜翔學狗叫" type="button" style="width:200px;height:100px;"
+                            onclick="ChangeCharacter('煜翔學狗叫')">
+                            <img src="./img/back9.gif" id="杰克武士" style="width:80px;height:80px;">
+                        </button>
+                        <button id="草" type="button" style="width:100px;height:100px;" onclick="ChangeCharacter('草')">
+                            <img src="./img/nightback.png" id="草圖片" style="width:80px;height:80px;">
+                        </button>
+                        <button id="幹" type="button" style="width:100px;height:100px;" onclick="ChangeCharacter('幹')">
+                            <img src="./img/fireback.gif" id="幹圖片" style="width:80px;height:80px;">
+                        </button>
+
+                        <button onclick="switchDope();">START</button>
+                    </div>
+                </div>
+                <div id="info2">
+                    <h2 id="hi">SECOND PLAYER</h2>
+                    <img src="./img/Girl.png" alt="霞妹" style="width: 300px; height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        
+        <button class="fa-solid fa-volume-high" id="ASong" onClick="playPause()">
+            <audio src="./img/SilkStrike.mp3" autoplay loop></audio>
+            
+        </button>
+
+        <script>
+
+            var aud = document.getElementById("ASong").children[0];
+            var isPlaying = true;
+            aud.play();
+    
+            function playPause() {
+                if (isPlaying) {
+                    aud.pause();
+                } else {
+                    aud.play();
+                }
+                isPlaying = !isPlaying;
+            }
+            playPause()
+        </script>
+
+        <script>
+            function switchPage() {
+                var page1 = document.getElementById("page1");
+                var page2 = document.getElementById("page2");
+
+                page1.classList.remove("active");
+                page2.classList.add("active");
+
+                document.body.className = "page2";
+
+                console.log('j')
+            }
+
+            function ChangeCharacter(name) {
+                // 你的角色切换逻辑
+                console.log("切换角色：" + name);
+            }
+        </script>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
